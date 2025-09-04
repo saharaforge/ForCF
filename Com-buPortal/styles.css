@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #1a1a1a,
+        #1a1a1a 10px,
+        #141414 10px,
+        #141414 20px
+    );
+}
+
+p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a.hover-underline {
+    position: relative;
+}
+
+a.hover-underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: -2px; /* テキストの下に隙間 */
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+a.hover-underline:hover::after {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    margin: 60px 42px 0 42px;
+    padding: 0 2%;
+    align-items: center;
+    top:10px;
+    position: sticky;
+}
+
+header h2 {
+    width: 30%;
+    text-align: left;
+}
+
+nav {
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: 16%;
+    min-width: 100px;
+}
+
+nav ul li {
+    border-right:1px solid #ffffff;
+}
+
+nav ul li:first-child {
+    border-left:1px solid #ffffff;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: -2px; /* テキストの下に隙間 */
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+main {
+    margin: 60px 285px;
+}
+
+.section-div {
+    justify-items: center;
+    align-items: center;
+    padding: 100px 0 80px 0;
+}
+
+.section-div:not(:last-child) {
+    border-bottom: 2px solid #999999;
+}
+
+.section-div h2 {
+    margin: 0;
+    padding: 0px 0 40px 0;
+}
+
+.section-div ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    gap: 40px;
+}
+
+.section-div ul li {
+    list-style: none;
+    width: 400px;
+    height: 400px;
+}
+
+.section-div ul li a {
+    display:block;
+    text-decoration: none;
+    color: inherit;
+    position:relative;
+    height: 300px;
+}
+
+.section-div ul li a:hover::before {
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:2;
+    background:#000;/*好みの色に変えてください。*/
+    opacity:0;
+    transition:0.3s;
+}
+
+.section-div ul li a::after {
+    content: "GO DETAIL";
+    display:block;
+    color:#fff;
+    line-height:48px;
+    width:180px;
+    border:solid 1px #fff;
+    border-radius:5px;
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-1em;
+    margin-left:-90px;
+    opacity:0;
+    z-index:3;
+    transition:0.3s;
+    font-weight:bold;
+    letter-spacing:0.2em;
+}
+
+.section-div ul li a:hover:before{
+    opacity:0.5;
+}
+.section-div ul li a:hover:after{
+    opacity:1;
+    margin-top:-0.5em;
+}
+
+.section-div ul li a img {
+    border-radius: 10px;
+}
+
+.work-description {
+    margin: 0;
+    padding: 0;
+    height: 48px;
+    width: 100%;
+}
+
+.work-description .work-title {
+    text-align: left;
+    margin: 8px 0 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.work-description .work-explain {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #999999;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+footer p {
+    color: #999999;
+}
+
+footer a.hover-underline::after {
+    background-color: #999999;
+}
+
+/* ---- ポップアップウィンドウ ---- */

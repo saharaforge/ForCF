@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\CLUBWORKS]
+@="url:CLUBWORKS protocol"
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\CLUBWORKS\shell\open\command]
+@="PowerShell -windowstyle hidden -Command \"$v=\\\"%1\\\".Replace('clubworks:','');$v=[uri]::UnescapeDataString($v);Start-Process $v;exit\""
